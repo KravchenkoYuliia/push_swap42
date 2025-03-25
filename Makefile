@@ -6,7 +6,7 @@
 #    By: yukravch <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/24 11:35:15 by yukravch          #+#    #+#              #
-#    Updated: 2025/03/24 12:57:44 by yukravch         ###   ########.fr        #
+#    Updated: 2025/03/25 17:10:24 by yukravch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,11 +18,11 @@ CC = cc
 all: $(NAME)
 
 SRC_DIR = sources
-INC_DIR = includes
+INC_DIR = -I includes -I library/libft_full_library/includes
 OBJ_DIR = objects
 
-FILES = main.c
-CFLAGS = -Wall -Werror -Wextra -g3 -I $(INC_DIR)
+FILES = main.c exit.c
+CFLAGS = -Wall -Werror -Wextra -g3 $(INC_DIR)
 
 OBJ = $(addprefix $(OBJ_DIR)/, $(FILES:.c=.o))
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
