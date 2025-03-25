@@ -6,7 +6,7 @@
 /*   By: yukravch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 11:24:43 by yukravch          #+#    #+#             */
-/*   Updated: 2025/03/25 17:58:51 by yukravch         ###   ########.fr       */
+/*   Updated: 2025/03/25 18:09:25 by yukravch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,8 +114,6 @@ int	main(int ac, char **av)
 	t_list	*a = NULL;
 	t_list	*b = NULL;
 
-	ft_printf("a address:%p\n", &a);
-	ft_exit("Exemple", &a, &b);
 	if (ac == 1)
 		ft_exit("Put at least one argument", NULL, NULL);
 	if (ft_wrong_argv_format(ac - 1, av + 1))
