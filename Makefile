@@ -37,6 +37,8 @@ $(LIBS):
 
 clean:
 	rm -rf $(OBJ_DIR)
-fclean:
+
+fclean: clean
 	rm -f $(NAME)
+
 re: fclean all

@@ -15,9 +15,9 @@ NAME = libft.a
 CC = /usr/bin/cc
 AR = /usr/bin/ar
 RM = /usr/bin/rm
-MKDIR = /usr/bin/mkdir
+MKDIR = $(shell type mkdir)
 
-all: $(NAME) 
+all: $(NAME)
 
 PATH = sources
 FILES  = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c \
