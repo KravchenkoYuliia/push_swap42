@@ -6,7 +6,7 @@
 /*   By: yukravch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 11:24:35 by yukravch          #+#    #+#             */
-/*   Updated: 2025/03/27 12:49:11 by yukravch         ###   ########.fr       */
+/*   Updated: 2025/03/27 13:43:21 by yukravch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,8 @@ void	ft_swap_ab(t_list **lst1, t_list **lst2);
 int     ft_is_overflow(t_list *list);
 int     ft_is_duplicate(t_list *list);
 int     ft_wrong_argv_format(int ac, char **av);
+void    ft_push(t_list **dest, t_list **src);
+void    ft_push_a(t_list **a, t_list **b);
+void    ft_push_b(t_list **a, t_list **b);
+
 #endif

@@ -6,7 +6,7 @@
 /*   By: yukravch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 11:24:43 by yukravch          #+#    #+#             */
-/*   Updated: 2025/03/27 12:48:13 by yukravch         ###   ########.fr       */
+/*   Updated: 2025/03/27 14:04:44 by yukravch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ int	main(int ac, char **av)
 	if (ft_is_duplicate(a))
 		ft_exit("There are duplicate numbers", &a, &b);
 	ft_print_list_int(a);
+	ft_print_list_int(b);
 	ft_lstclear(&a, &free);
 	ft_lstclear(&b, &free);
 }
