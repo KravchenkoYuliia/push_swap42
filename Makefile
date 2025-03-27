@@ -6,19 +6,19 @@
 #    By: yukravch <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/24 11:35:15 by yukravch          #+#    #+#              #
-#    Updated: 2025/03/25 17:10:24 by yukravch         ###   ########.fr        #
+#    Updated: 2025/03/27 09:48:31 by yukravch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-LIBS = library/libft_full_library/libft.a
+LIBS = library/libft/libft.a
 CC = cc
 
 all: $(NAME)
 
 SRC_DIR = sources
-INC_DIR = -I includes -I library/libft_full_library/includes
+INC_DIR = -I includes -I library/libft/includes
 OBJ_DIR = objects
 
 FILES = main.c exit.c
@@ -33,7 +33,7 @@ $(NAME): $(OBJ) $(LIBS)
 	$(CC) $(CFLAGS) $(OBJ) $(LIBS) -o $(NAME)
 
 $(LIBS):
-	make -C library/libft_full_library
+	make -C library/libft
 
 clean:
 	rm -rf $(OBJ_DIR)
