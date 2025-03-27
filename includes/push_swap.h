@@ -6,7 +6,7 @@
 /*   By: yukravch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 11:24:35 by yukravch          #+#    #+#             */
-/*   Updated: 2025/03/27 14:42:46 by yukravch         ###   ########.fr       */
+/*   Updated: 2025/03/27 16:12:34 by yukravch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,14 @@ int     ft_wrong_argv_format(int ac, char **av);
 void    ft_push(t_list **dest, t_list **src);
 void    ft_push_a(t_list **a, t_list **b);
 void    ft_push_b(t_list **a, t_list **b);
-void    ft_rotate(t_list **list);
-void    ft_rotate_a(t_list **list);
-void    ft_rotate_b(t_list **list);
-void    ft_rotate_ab(t_list **lst1, t_list **lst2);
+void	ft_rotate(t_list **list);
+void	ft_rotate_a(t_list **list);
+void	ft_rotate_b(t_list **list);
+void	ft_rotate_ab(t_list **lst1, t_list **lst2);
 
+void	ft_rev_rotate(t_list **list);
+void	ft_rev_rotate_a(t_list **list);
+void	ft_rev_rotate_b(t_list **list);
+void	ft_rev_rotate_ab(t_list **lst1, t_list **lst2);
 
 #endif
