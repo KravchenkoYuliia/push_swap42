@@ -40,7 +40,7 @@ void	ft_rev_rotate(t_list **list)
 void	ft_rev_rotate_a(t_list **list)
 {
 	if (ft_lstsize(*list) < 2)
-		ft_exit("Need at least 2 lists to rev rotate", list, NULL);
+		return ;
 	ft_printf("rra\n");
 	ft_rev_rotate(list);
 }
@@ -48,7 +48,7 @@ void	ft_rev_rotate_a(t_list **list)
 void	ft_rev_rotate_b(t_list **list)
 {
 	if (ft_lstsize(*list) < 2)
-		ft_exit("Need at least 2 lists to rev rotate", NULL, list);
+		return ;
 	ft_printf("rrb\n");
 	ft_rev_rotate(list);
 }
@@ -56,7 +56,7 @@ void	ft_rev_rotate_b(t_list **list)
 void	ft_rev_rotate_ab(t_list **lst1, t_list **lst2)
 {
 	if (ft_lstsize(*lst1) < 2 || ft_lstsize(*lst2) < 2)
-		ft_exit("Need at least 2 lists to rev rotate", lst1, lst2);
+		return ;
 	ft_printf("rrr\n");
 	ft_rev_rotate(lst1);
 	ft_rev_rotate(lst2);

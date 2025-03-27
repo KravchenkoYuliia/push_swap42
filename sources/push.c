@@ -26,7 +26,7 @@ void	ft_push(t_list **dest, t_list **src)
 void	ft_push_a(t_list **a, t_list **b)
 {
 	if (!*b | !b)
-		ft_exit("You can't push from b to a, b does not exist", a, NULL);
+		return ;
 	ft_printf("pa\n");
 	ft_push(a, b);
 }
@@ -34,7 +34,7 @@ void	ft_push_a(t_list **a, t_list **b)
 void	ft_push_b(t_list **a, t_list **b)
 {
 	if (!*a | !a)
-		ft_exit("You can't push from a to b, a does not exist", NULL, b);
+		return ;
 	ft_printf("pb\n");
 	ft_push(b, a);
 }
