@@ -6,7 +6,7 @@
 /*   By: yukravch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 11:24:43 by yukravch          #+#    #+#             */
-/*   Updated: 2025/03/27 16:14:11 by yukravch         ###   ########.fr       */
+/*   Updated: 2025/03/30 16:18:47 by yukravch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,13 @@ int	ft_put_to_stack_a(char *str, t_list **a)
 	return (0);
 }
 
+void	ft_sort_3_elems(t_list **a)
+{
+//	ft_printf("%d, %d", (*a)->next->content, (*a)->content);
+	if ((*a)->next->content < (*a)->content)	
+		ft_swap_a(a);
+}
+
 int	main(int ac, char **av)
 {
 	int	i;
@@ -66,15 +73,12 @@ int	main(int ac, char **av)
 		ft_exit("Put number between INT_MIN and INT_MAX", &a, &b);
 	if (ft_is_duplicate(a))
 		ft_exit("There are duplicate numbers", &a, &b);
-	//test new functions
 
 	ft_print_list_int("a", a);
-	//ft_print_list_int("b", b);
-
-	ft_rev_rotate_a(&a);
-
+	ft_print_list_int("b", b);
+	
+	ft_sort_3_elems(&a);
 	ft_print_list_int("a", a);
-	//ft_print_list_int("b", b);
 	
 	ft_lstclear(&a, &free);
 	ft_lstclear(&b, &free);
