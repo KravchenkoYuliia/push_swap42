@@ -12,14 +12,9 @@
 
 NAME = libft.a
 
-CC = /usr/bin/cc
-AR = /usr/bin/ar
-RM = /usr/bin/rm
-MKDIR = $(shell type mkdir)
-
 all: $(NAME)
 
-PATH = sources
+SRC_DIR = sources
 FILES  = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c \
 			ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c \
 			ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c \
@@ -34,7 +29,7 @@ FILES  = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_str
                         \
                         get_next_line.c get_next_line_utils.c \
 
-SRC = $(addprefix $(PATH)/, $(FILES))
+SRC = $(addprefix $(SRC_DIR)/, $(FILES))
 INC = includes/
 OBJ_DIR = objects
 
@@ -42,17 +37,17 @@ OBJECTS = $(addprefix $(OBJ_DIR)/, $(FILES:.c=.o))
 CFLAGS = -Wall -Wextra -Werror -I $(INC)
 
 $(NAME): $(OBJ_DIR) $(OBJECTS)
-	$(AR) rcs $(NAME) $(OBJECTS)
+	ar rcs $(NAME) $(OBJECTS)
 
 $(OBJ_DIR):
-	$(MKDIR) -p $(OBJ_DIR)
+	mkdir -p $(OBJ_DIR)
 
-$(OBJ_DIR)/%.o: $(PATH)/%.c
-	$(CC) -c $(CFLAGS) -o $@ $<
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	cc -c $(CFLAGS) -o $@ $<
 
 clean:
-	$(RM) -rf $(OBJ_DIR)
+	rm -rf $(OBJ_DIR)
 fclean: clean
-	$(RM) -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
