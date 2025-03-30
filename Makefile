@@ -13,7 +13,6 @@
 NAME = push_swap
 
 LIBS = library/libft/libft.a
-CC = cc
 
 all: $(NAME)
 
@@ -21,16 +20,16 @@ SRC_DIR = sources
 INC_DIR = -I includes -I library/libft/includes
 OBJ_DIR = objects
 
-FILES = main.c error_check.c exit.c swap.c push.c rotate.c reverse_rotate.c
+FILES = main.c error_check.c exit.c swap.c push.c rotate.c reverse_rotate.c sort_small_int.c utils.c
 CFLAGS = -Wall -Werror -Wextra -g3 $(INC_DIR)
 
 OBJ = $(addprefix $(OBJ_DIR)/, $(FILES:.c=.o))
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(OBJ_DIR)
-	$(CC) $(CFLAGS) -c $< -o $@
+	cc $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJ) $(LIBS)
-	$(CC) $(CFLAGS) $(OBJ) $(LIBS) -o $(NAME)
+	cc $(CFLAGS) $(OBJ) $(LIBS) -o $(NAME)
 
 $(LIBS):
 	make -C library/libft

@@ -40,4 +40,11 @@ void	ft_rev_rotate_a(t_list **list);
 void	ft_rev_rotate_b(t_list **list);
 void	ft_rev_rotate_ab(t_list **lst1, t_list **lst2);
 
+long	val(t_list *node);
+void    ft_sort_2_elems(t_list **lst);
+void    ft_sort_3_elems(t_list **lst);
+void	ft_sort_4_elems(t_list **a, t_list **b);
+
+int    ft_find_min_int(t_list *lst);
+
 #endif

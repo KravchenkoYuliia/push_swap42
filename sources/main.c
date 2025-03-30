@@ -45,11 +45,9 @@ int	ft_put_to_stack_a(char *str, t_list **a)
 	return (0);
 }
 
-void	ft_sort_3_elems(t_list **a)
+long	val(t_list *node)
 {
-//	ft_printf("%d, %d", (*a)->next->content, (*a)->content);
-	if ((*a)->next->content < (*a)->content)	
-		ft_swap_a(a);
+	return *(long *)node->content;
 }
 
 int	main(int ac, char **av)
@@ -77,8 +75,9 @@ int	main(int ac, char **av)
 	ft_print_list_int("a", a);
 	ft_print_list_int("b", b);
 	
-	ft_sort_3_elems(&a);
+	//ft_sort_4_elems(&a, &b);
 	ft_print_list_int("a", a);
+	ft_print_list_int("b", b);
 	
 	ft_lstclear(&a, &free);
 	ft_lstclear(&b, &free);
