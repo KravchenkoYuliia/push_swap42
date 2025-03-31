@@ -34,7 +34,6 @@ void	ft_sort_3_elems(t_list **lst)
 void	ft_sort_4_elems(t_list **a, t_list **b)
 {
 	int	min;
-	(void) b;
 	min = ft_find_min_int(*a);
 	if (min == 0)
 	{	
@@ -64,7 +63,52 @@ void	ft_sort_4_elems(t_list **a, t_list **b)
 		ft_push_b(a, b);
 		ft_sort_3_elems(a);
 		ft_push_a(a, b);
+	}
+}
 
+void	ft_sort_5_elems(t_list **a, t_list **b)
+{
+	int	min;
+
+	min = ft_find_min_int(*a);
+	ft_printf("min has index: %d\n", min);
+	if (min == 0)
+	{
+		ft_push_b(a, b);
+		ft_print_list_int("a", *a);
+		ft_sort_4_elems(a, b);
+		ft_push_a(a, b);
+	}
+	else if (min == 1)
+	{
+		ft_swap_a(a);
+		ft_push_b(a, b);
+		ft_sort_4_elems(a, b);
+		ft_push_a(a, b);
+	}
+	else if (min == 2)
+	{
+		ft_rev_rotate_a(a);
+		ft_rev_rotate_a(a);
+		ft_rev_rotate_a(a);
+		ft_push_b(a, b);
+		ft_sort_4_elems(a, b);
+		ft_push_a(a, b);
+	}
+	else if (min == 3)
+	{
+		ft_rev_rotate_a(a);
+		ft_rev_rotate_a(a);
+		ft_push_b(a, b);
+		ft_sort_4_elems(a, b);
+		ft_push_a(a, b);
+	}
+	else if (min == 4)
+	{
+		ft_rev_rotate_a(a);
+		ft_push_b(a, b);
+		ft_sort_4_elems(a, b);
+		ft_push_a(a, b);
 	}
 }
 

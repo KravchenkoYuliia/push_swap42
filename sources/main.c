@@ -6,7 +6,7 @@
 /*   By: yukravch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 11:24:43 by yukravch          #+#    #+#             */
-/*   Updated: 2025/03/31 19:57:19 by yukravch         ###   ########.fr       */
+/*   Updated: 2025/03/31 20:27:15 by yukravch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,8 @@ void	ft_sort_stack(t_list **a, t_list **b)
 		ft_sort_3_elems(a);
 	else if (ft_lstsize(*a) == 4)
 		ft_sort_4_elems(a, b);
+	else if (ft_lstsize(*a) == 5)
+		ft_sort_5_elems(a, b);
 }
 
 int	main(int ac, char **av)
@@ -84,7 +86,7 @@ int	main(int ac, char **av)
 	
 	ft_sort_stack(&a, &b);
 	
-	ft_printf("After sort\n"); //del
+	ft_printf("\nAfter sort\n\n"); //del
 	ft_print_list_int("a", a); //del
 	ft_print_list_int("b", b); //del
 	

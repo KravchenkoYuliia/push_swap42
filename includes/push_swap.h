@@ -6,7 +6,7 @@
 /*   By: yukravch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 11:24:35 by yukravch          #+#    #+#             */
-/*   Updated: 2025/03/27 16:12:34 by yukravch         ###   ########.fr       */
+/*   Updated: 2025/03/31 20:25:42 by yukravch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ long	val(t_list *node);
 void    ft_sort_2_elems(t_list **lst);
 void    ft_sort_3_elems(t_list **lst);
 void	ft_sort_4_elems(t_list **a, t_list **b);
+void    ft_sort_5_elems(t_list **a, t_list **b);
 
 int    ft_find_min_int(t_list *lst);
 
