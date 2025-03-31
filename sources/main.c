@@ -6,7 +6,7 @@
 /*   By: yukravch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 11:24:43 by yukravch          #+#    #+#             */
-/*   Updated: 2025/03/30 16:18:47 by yukravch         ###   ########.fr       */
+/*   Updated: 2025/03/31 19:57:19 by yukravch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,16 @@ long	val(t_list *node)
 	return *(long *)node->content;
 }
 
+void	ft_sort_stack(t_list **a, t_list **b)
+{
+	if (ft_lstsize(*a) == 2)
+		ft_sort_2_elems(a);
+	else if (ft_lstsize(*a) == 3)
+		ft_sort_3_elems(a);
+	else if (ft_lstsize(*a) == 4)
+		ft_sort_4_elems(a, b);
+}
+
 int	main(int ac, char **av)
 {
 	int	i;
@@ -71,14 +81,15 @@ int	main(int ac, char **av)
 		ft_exit("Put number between INT_MIN and INT_MAX", &a, &b);
 	if (ft_is_duplicate(a))
 		ft_exit("There are duplicate numbers", &a, &b);
-
-	ft_print_list_int("a", a);
-	ft_print_list_int("b", b);
 	
-	//ft_sort_4_elems(&a, &b);
-	ft_print_list_int("a", a);
-	ft_print_list_int("b", b);
+	ft_sort_stack(&a, &b);
+	
+	ft_printf("After sort\n"); //del
+	ft_print_list_int("a", a); //del
+	ft_print_list_int("b", b); //del
 	
 	ft_lstclear(&a, &free);
 	ft_lstclear(&b, &free);
+	
+	
 }
