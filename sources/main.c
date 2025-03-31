@@ -6,7 +6,7 @@
 /*   By: yukravch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 11:24:43 by yukravch          #+#    #+#             */
-/*   Updated: 2025/03/31 20:27:15 by yukravch         ###   ########.fr       */
+/*   Updated: 2025/03/31 21:45:44 by yukravch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,26 @@ long	val(t_list *node)
 	return *(long *)node->content;
 }
 
+int	ft_is_already_sorted(t_list *lst)
+{
+	while (lst)
+	{
+		if (lst->next != NULL && val(lst) > val(lst->next))
+		{
+			ft_printf("Not sorted\n\n");
+			return (0);
+		}
+		lst = lst->next;
+	}
+	ft_printf("Sorted\n\n");
+	return (1);
+}
+
 void	ft_sort_stack(t_list **a, t_list **b)
 {
-	if (ft_lstsize(*a) == 2)
+	if (ft_is_already_sorted(*a))
+		return ;
+	else if (ft_lstsize(*a) == 2)
 		ft_sort_2_elems(a);
 	else if (ft_lstsize(*a) == 3)
 		ft_sort_3_elems(a);
