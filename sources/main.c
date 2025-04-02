@@ -77,6 +77,8 @@ void	ft_sort_stack(t_list **a, t_list **b)
 		ft_sort_4_elems(a, b);
 	else if (ft_lstsize(*a) == 5)
 		ft_sort_5_elems(a, b);
+	else
+		ft_sort_list(a, b);
 }
 
 int	main(int ac, char **av)

@@ -44,8 +44,11 @@ long	val(t_list *node);
 void    ft_sort_2_elems(t_list **lst);
 void    ft_sort_3_elems(t_list **lst);
 void	ft_sort_4_elems(t_list **a, t_list **b);
-void    ft_sort_5_elems(t_list **a, t_list **b);
+void	ft_sort_5_elems(t_list **a, t_list **b);
 
-int    ft_find_min_int(t_list *lst);
+int	ft_find_min_int(t_list *lst);
+int	ft_get_index(t_list *start_node, t_list *node);
+void	ft_sort_list(t_list **a, t_list **b);
+void	ft_put_to_index_list(t_list **index_list, int i);
 
 #endif

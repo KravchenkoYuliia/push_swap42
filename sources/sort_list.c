@@ -17,6 +17,7 @@ int	ft_get_index(t_list *start_node, t_list *node)
 
 void	ft_sort_list(t_list **a, t_list **b)
 {
+	(void) b;
 	int	i;
 	t_list	*start_node;
 	t_list	*index_list;
@@ -31,7 +32,8 @@ void	ft_sort_list(t_list **a, t_list **b)
 		ft_put_to_index_list(&index_list, i);
 		temp = temp->next;
 	}
-	
+	ft_lstclear(a, &free);
+	*a = index_list;// a(main) -> list ;; a(ft_sort_list) -> a(main)
 }
 
 void	ft_put_to_index_list(t_list **index_list, int i)

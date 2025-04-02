@@ -20,7 +20,7 @@ SRC_DIR = sources
 INC_DIR = -I includes -I library/libft/includes
 OBJ_DIR = objects
 
-FILES = main.c error_check.c exit.c swap.c push.c rotate.c reverse_rotate.c sort_small_int.c utils.c
+FILES = main.c error_check.c exit.c swap.c push.c rotate.c reverse_rotate.c sort_small_list.c utils.c sort_list.c
 CFLAGS = -Wall -Werror -Wextra -g3 $(INC_DIR)
 
 OBJ = $(addprefix $(OBJ_DIR)/, $(FILES:.c=.o))
