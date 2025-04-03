@@ -40,7 +40,8 @@ void	ft_rev_rotate_a(t_list **list);
 void	ft_rev_rotate_b(t_list **list);
 void	ft_rev_rotate_ab(t_list **lst1, t_list **lst2);
 
-long	val(t_list *node);
+long    val(t_list *node);
+int     ft_int_value(t_list *node);
 void    ft_sort_2_elems(t_list **lst);
 void    ft_sort_3_elems(t_list **lst);
 void	ft_sort_4_elems(t_list **a, t_list **b);
@@ -50,5 +51,6 @@ int	ft_find_min_int(t_list *lst);
 int	ft_get_index(t_list *start_node, t_list *node);
 void	ft_sort_list(t_list **a, t_list **b);
 void	ft_put_to_index_list(t_list **index_list, int i);
+void	ft_start_of_radix(t_list **a, t_list **b);
 
 #endif

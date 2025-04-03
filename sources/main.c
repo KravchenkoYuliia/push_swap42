@@ -50,18 +50,20 @@ long	val(t_list *node)
 	return *(long *)node->content;
 }
 
+int	ft_int_value(t_list *node)
+{
+	return *(int *)node->content;
+}
 int	ft_is_already_sorted(t_list *lst)
 {
 	while (lst)
 	{
 		if (lst->next != NULL && val(lst) > val(lst->next))
 		{
-			ft_printf("Not sorted\n\n");
 			return (0);
 		}
 		lst = lst->next;
 	}
-	ft_printf("Sorted\n\n");
 	return (1);
 }
 
@@ -104,10 +106,9 @@ int	main(int ac, char **av)
 		ft_exit("There are duplicate numbers", &a, &b);
 	
 	ft_sort_stack(&a, &b);
-	
-	ft_printf("\nIndex of every number:\n\n"); //del
-	ft_print_list_int("a", a); //del
-	ft_print_list_int("b", b); //del
+
+	ft_print_list_int("a", a);
+	ft_print_list_int("b", b);
 	
 	ft_lstclear(&a, &free);
 	ft_lstclear(&b, &free);
