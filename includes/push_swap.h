@@ -51,6 +51,8 @@ int	ft_find_min_int(t_list *lst);
 int	ft_get_index(t_list *start_node, t_list *node);
 void	ft_sort_list(t_list **a, t_list **b);
 void	ft_put_to_index_list(t_list **index_list, int i);
-void	ft_start_of_radix(t_list **a, t_list **b);
+void	ft_radix(t_list **a, t_list **b);
+void    ft_choose_stack(t_list **🤓, t_list **🧐, int 👾);
+int	ft_bits_size(t_list *a);
 
 #endif
