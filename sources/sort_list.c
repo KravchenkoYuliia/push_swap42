@@ -34,6 +34,8 @@ void	ft_sort_list(t_list **a, t_list **b)
 	}
 	ft_lstclear(a, &free);
 	*a = index_list;// a(main) -> list ;; a(ft_sort_list) -> a(main)
+	//first step to sort is to put every 1 to A stack and 0 - to B stack
+	ft_start_of_radix(a);
 }
 
 void	ft_put_to_index_list(t_list **index_list, int i)
@@ -47,4 +49,15 @@ void	ft_put_to_index_list(t_list **index_list, int i)
 	*new_i = i;
 	new = ft_lstnew(new_i);
 	ft_lstadd_back(index_list, new);
+}
+
+
+void	ft_start_of_radix(t_list **a);
+{
+	while (a)
+	{
+		if (1 & (val(*a) >> 7))
+			ft_push_b(a)
+		a = a->next;
+	}
 }

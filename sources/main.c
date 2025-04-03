@@ -105,7 +105,7 @@ int	main(int ac, char **av)
 	
 	ft_sort_stack(&a, &b);
 	
-	ft_printf("\nAfter sort\n\n"); //del
+	ft_printf("\nIndex of every number:\n\n"); //del
 	ft_print_list_int("a", a); //del
 	ft_print_list_int("b", b); //del
 	
