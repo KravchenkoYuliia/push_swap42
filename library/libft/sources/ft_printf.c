@@ -6,7 +6,7 @@
 /*   By: yukravch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 11:34:04 by yukravch          #+#    #+#             */
-/*   Updated: 2025/02/17 11:50:25 by yukravch         ###   ########.fr       */
+/*   Updated: 2025/04/09 17:28:40 by yukravch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
@@ -68,7 +68,8 @@ int	ft_printf(const char *mand_arg, ...)
 	{
 		if (mand_arg[i] != '%')
 			arg_len += ft_putchar_printf((char)mand_arg[i]);
-		else if (mand_arg[i] == '%' && ft_charset_printf(mand_arg[i + 1], "cspdiuxX%"))
+		else if (mand_arg[i] == '%'
+			&& ft_charset_printf(mand_arg[i + 1], "cspdiuxX%"))
 		{
 			arg_len += ft_format_printf(mand_arg[i + 1], arg);
 			i++;

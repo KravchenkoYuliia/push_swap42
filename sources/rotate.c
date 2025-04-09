@@ -6,7 +6,7 @@
 /*   By: yukravch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 14:07:48 by yukravch          #+#    #+#             */
-/*   Updated: 2025/03/27 14:53:47 by yukravch         ###   ########.fr       */
+/*   Updated: 2025/04/09 16:35:26 by yukravch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,3 @@ void	ft_rotate_ab(t_list **lst1, t_list **lst2)
 	ft_rotate(lst1);
 	ft_rotate(lst2);
 }
-

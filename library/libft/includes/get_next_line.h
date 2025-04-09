@@ -6,7 +6,7 @@
 /*   By: yukravch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 11:26:08 by yukravch          #+#    #+#             */
-/*   Updated: 2025/03/20 11:28:15 by yukravch         ###   ########.fr       */
+/*   Updated: 2025/04/09 17:24:23 by yukravch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ char	*ft_read_buffer(int fd, char *reserve);
 char	*get_next_line(int fd);
 void	ft_bzero_gnl(void *s, size_t n);
 void	*ft_calloc_gnl(size_t nmemb, size_t size);
-int	ft_strlen_gnl(char *str);
+int		ft_strlen_gnl(char *str);
 char	*ft_strcpy_gnl(char *dest, char *src);
-int	ft_strchr_gnl(const char *s, int c);
+int		ft_strchr_gnl(const char *s, int c);
 
 #endif

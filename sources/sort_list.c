@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_list.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yukravch <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/09 16:36:01 by yukravch          #+#    #+#             */
+/*   Updated: 2025/04/09 16:38:50 by yukravch         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 int	ft_get_index(t_list *start_node, t_list *node)
@@ -5,19 +17,18 @@ int	ft_get_index(t_list *start_node, t_list *node)
 	int	i;
 
 	i = 0;
-
 	while (start_node)
 	{
 		if (val(node) > val(start_node))
 			i++;
-		start_node = start_node->next;	
+		start_node = start_node->next;
 	}
 	return (i);
 }
 
 void	ft_sort_list(t_list **a, t_list **b)
 {
-	int	i;
+	int		i;
 	t_list	*start_node;
 	t_list	*index_list;
 	t_list	*temp;
@@ -32,38 +43,8 @@ void	ft_sort_list(t_list **a, t_list **b)
 		temp = temp->next;
 	}
 	ft_lstclear(a, &free);
-	*a = index_list;// a(main) -> list ;; a(ft_sort_list) -> a(main)
-	//first step to sort is to put every 1 to A stack and 0 - to B stack
+	*a = index_list;
 	ft_radix(a, b);
-}
-
-void	ft_put_to_index_list(t_list **index_list, int i)
-{
-	t_list	*new;
-	int	*new_i;
-
-	new_i = (int *)malloc(sizeof(int));
-	if (!new_i)
-		return ;
-	*new_i = i;
-	new = ft_lstnew(new_i);
-	ft_lstadd_back(index_list, new);
-}
-
-
-void	ft_print_bits(int i)
-{
-	int	count;
-
-	count = 7;
-	while (count >= 0)
-	{
-		if (1 & (i >> count))
-			ft_printf("1");
-		else
-			ft_printf("0");
-		count--;
-	}
 }
 
 int	ft_bits_size(t_list *a)
@@ -73,7 +54,7 @@ int	ft_bits_size(t_list *a)
 
 	i = 0;
 	number = ft_lstsize(a) - 1;
-	while(number > 0)
+	while (number > 0)
 	{
 		number /= 2;
 		i++;
@@ -81,14 +62,14 @@ int	ft_bits_size(t_list *a)
 	return (i);
 }
 
-void	ft_radix(t_list **a, t_list **b) // all binary that is finishing by 1 is in stack A and 0 - in B
+void	ft_radix(t_list **a, t_list **b)
 {
 	int	bit;
 	int	max_bit;
 
 	bit = 0;
 	max_bit = ft_bits_size(*a);
-	while(bit < max_bit)
+	while (bit < max_bit)
 	{	
 		ft_choose_stack(a, b, bit);
 		while (*b)
@@ -97,11 +78,11 @@ void	ft_radix(t_list **a, t_list **b) // all binary that is finishing by 1 is in
 	}
 }
 
-void	ft_choose_stack(t_list **a, t_list **b, int bit) // all binary that is finishing by 1 is in stack A and 0 - in B
+void	ft_choose_stack(t_list **a, t_list **b, int bit)
 {
 	int		i;
 	int		initial_size;
-	t_list		*temp;
+	t_list	*temp;
 
 	i = 0;
 	initial_size = ft_lstsize(*a);
