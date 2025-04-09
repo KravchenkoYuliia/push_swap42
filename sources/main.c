@@ -6,7 +6,7 @@
 /*   By: yukravch <yukravch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 11:24:43 by yukravch          #+#    #+#             */
-/*   Updated: 2025/04/09 16:59:03 by yukravch         ###   ########.fr       */
+/*   Updated: 2025/04/09 17:31:29 by yukravch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,6 @@ int	main(int ac, char **av)
 	}
 	ft_basic_check_two(a, b);
 	ft_sort_stack(&a, &b);
-	ft_print_list_int("a", a);
 	ft_lstclear(&a, &free);
 	ft_lstclear(&b, &free);
 }
