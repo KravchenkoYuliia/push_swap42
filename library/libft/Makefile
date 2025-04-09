@@ -6,7 +6,7 @@
 #    By: yukravch <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/20 17:48:22 by yukravch          #+#    #+#              #
-#    Updated: 2025/03/27 09:51:47 by yukravch         ###   ########.fr        #
+#    Updated: 2025/04/09 15:46:45 by yukravch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ FILES  = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_str
 			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 			ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
 			ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_print_list.c \
+			ft_print_bits.c \
 			\
                         ft_printf.c ft_print_hexa_printf.c ft_putchar_printf.c ft_putnbr_printf.c \
                         ft_putstr_printf.c \
