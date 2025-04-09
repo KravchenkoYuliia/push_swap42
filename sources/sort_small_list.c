@@ -71,7 +71,6 @@ void	ft_sort_5_elems(t_list **a, t_list **b)
 	int	min;
 
 	min = ft_find_min_int(*a);
-	ft_printf("min has index: %d\n", min);
 	if (min == 0)
 	{
 		ft_push_b(a, b);

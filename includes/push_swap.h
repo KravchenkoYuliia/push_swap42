@@ -6,7 +6,7 @@
 /*   By: yukravch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 11:24:35 by yukravch          #+#    #+#             */
-/*   Updated: 2025/03/31 20:25:42 by yukravch         ###   ########.fr       */
+/*   Updated: 2025/04/09 15:21:46 by yukravch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,10 @@ void	ft_put_to_index_list(t_list **index_list, int i);
 void	ft_radix(t_list **a, t_list **b);
 void    ft_choose_stack(t_list **🤓, t_list **🧐, int 👾);
 int	ft_bits_size(t_list *a);
+long    *ft_malloc_number(long number);
+int     ft_is_already_sorted(t_list *lst);
+void    ft_sort_stack(t_list **a, t_list **b);
+
+
 
 #endif

@@ -21,3 +21,23 @@ int	ft_find_min_int(t_list *lst)
 	}
 	return i_min;
 }
+
+long    val(t_list *node)
+{
+        return *(long *)node->content;
+}
+
+int     ft_int_value(t_list *node)
+{
+        return *(int *)node->content;
+}
+
+long    *ft_malloc_number(long number)
+{
+        long    *nb = (long *)malloc(sizeof(long));
+        if (!nb)
+                return (NULL);
+        *nb = number;
+        return (nb);
+}
+
